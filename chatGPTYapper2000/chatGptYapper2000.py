@@ -2,15 +2,17 @@ import tts;
 import stt;
 import playingAudio;
 import talkingToAI;
+import os
+
 
 
 def yap():
     #Eleven Lab's Text to Speech api key
-    ttsKey = "sk_9ba5f1b7ae48a8ec0b63c84295fc12b311e8873da4d2153e";
+    ttsKey = os.getenv("ELEVEN_LABS_KEY");
     #ChatGPT's openAI api key
-    openAiKey = "sk-proj-AwcO45AvqTq6wmPS5yp7T3BlbkFJrUsxkepQlTmmW35VhNDU";
+    openAiKey = os.getenv("CHATGPT_KEY");
     #Azure Speech Key
-    sttKey = "3dde722349a1473eb9bed1a0fae56c5c"
+    sttKey = os.getenv("AZURE_STT_KEY")
     #The voice for tts
     ttsVoiceID = "MQecAvnWXnFp1qPv3tw0"
     #Region
